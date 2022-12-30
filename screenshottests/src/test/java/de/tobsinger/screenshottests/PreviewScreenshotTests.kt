@@ -82,7 +82,7 @@ class PreviewScreenshotTests {
     }
 
     private fun setDefaultLocaleForScreenshots() {
-//        Locale.setDefault(Locale.ENGLISH)
+        Locale.setDefault(Locale.ENGLISH)
     }
 
     private companion object {
