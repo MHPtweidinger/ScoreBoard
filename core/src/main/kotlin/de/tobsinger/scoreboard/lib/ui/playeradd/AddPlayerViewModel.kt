@@ -7,9 +7,7 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 
-internal class AddPlayerViewModel(
-    private val scoreboardService: ScoreboardService
-) : ViewModel() {
+internal class AddPlayerViewModel(private val scoreboardService: ScoreboardService) : ViewModel() {
 
     private val _state = MutableStateFlow("")
     val state = _state.asStateFlow()
