@@ -31,5 +31,5 @@ dependencyResolutionManagement {
 rootProject.name = "Scoreboard"
 include(":app")
 include(":screenshottests")
-include(":scoreboard")
+include(":core")
 include(":persistence")

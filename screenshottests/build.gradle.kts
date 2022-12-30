@@ -47,8 +47,7 @@ dependencies {
     implementation("androidx.compose.material:material:1.3.1")
 
     implementation("com.airbnb.android:showkase:1.0.0-kotlin1.5.30-1")
-
-    implementation(project(":scoreboard"))
+    implementation(project(":core"))
 
     kapt("com.airbnb.android:showkase-processor:1.0.0-kotlin1.5.30-1")
 
