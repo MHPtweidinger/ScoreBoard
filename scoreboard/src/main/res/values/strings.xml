@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Score Board</string>
+    <string name="score_board_title">Score Board</string>
+    <string name="score_board_menu_item_clear">Clear Scores</string>
+    <string name="score_board_menu_item_delete">Delete all Players</string>
+    <string name="score_board_scores_cleared_toast_msg">Scores cleared</string>
+    <string name="score_board_players_cleared_toast_msg">"All Players Deleted"</string>
+    <string name="player_add_title">Add Player</string>
+    <string name="player_add_input_field_label">Player Name</string>
+    <string name="player_add_button_save_label">Submit</string>
+    <string name="update_score_input_field_label">Scored points</string>
+    <string name="update_score_button_add_label">Add</string>
+    <string name="update_score_button_subtract_label">Subtract</string>
+    <string name="update_score_menu_delete_user_label">Delete Player</string>
+    <string name="update_score_sum_label">Sum:</string>
+    <string name="update_score_current_score_label">Score</string>
+    <string name="update_score_players_deleted_toast_msg">"Player deleted"</string>
+</resources>

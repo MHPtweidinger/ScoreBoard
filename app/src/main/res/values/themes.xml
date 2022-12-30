@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Theme.Scoreboard" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:navigationBarColor" tools:targetApi="s">
+            @android:color/system_neutral1_10
+        </item>
+
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+
+        <item name="android:statusBarColor" tools:targetApi="s">
+            @android:color/system_neutral1_10
+        </item>
+    </style>
+</resources>

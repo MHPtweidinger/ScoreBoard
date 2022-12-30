@@ -1,0 +1,22 @@
+package de.tobsinger.scoreboard.lib.ui.playeradd
+
+import androidx.lifecycle.ViewModel
+import de.tobsinger.scoreboard.lib.service.ScoreboardService
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.asStateFlow
+
+internal class AddPlayerViewModel(
+    private val scoreboardService: ScoreboardService
+) : ViewModel() {
+
+    private val _state = MutableStateFlow("")
+    val state = _state.asStateFlow()
+
+    fun onTextChanged(text: String) {
+        _state.value = text
+    }
+
+    fun onSave() {
+        scoreboardService.addPlayer(state.value)
+    }
+}

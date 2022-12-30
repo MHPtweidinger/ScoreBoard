@@ -1,0 +1,64 @@
+package de.tobsinger.scoreboard.lib.ui.updatescore
+
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
+import de.tobsinger.scoreboard.lib.service.ScoreboardService
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.SharingStarted
+import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.combine
+import kotlinx.coroutines.flow.stateIn
+
+internal class UpdateScoreViewModel(
+    private val scoreboardService: ScoreboardService,
+    private val playerName: String
+) :
+    ViewModel() {
+
+    private val _inputState: MutableStateFlow<Int?> = MutableStateFlow(null)
+    val state: StateFlow<UpdateScoreViewState> =
+        combine(scoreboardService.currentScore, _inputState) { currentScore, input ->
+            UpdateScoreViewState(
+                name = playerName,
+                scores = currentScore[playerName] ?: emptyList(),
+                userInput = input,
+            )
+        }.stateIn(
+            scope = viewModelScope,
+            started = SharingStarted.Lazily,
+            initialValue = UpdateScoreViewState(
+                name = playerName,
+                scores = emptyList(),
+                userInput = 0,
+            )
+        )
+
+    fun updateInput(input: String) {
+        _inputState.value = input.toIntOrNull()
+    }
+
+    fun add() {
+        _inputState.value?.let { points ->
+            scoreboardService.addPointsForPlayer(
+                points = points,
+                player = playerName
+            )
+        }
+    }
+
+    fun subtract() {
+        _inputState.value?.let { points ->
+            scoreboardService.addPointsForPlayer(
+                points = points * -1,
+                player = playerName
+            )
+        }
+    }
+
+    fun deleteUser() {
+        scoreboardService.deletePlayer(playerName)
+    }
+
+    data class UpdateScoreViewState(val name: String, val scores: List<Int>, val userInput: Int?)
+}
+
