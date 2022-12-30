@@ -21,7 +21,7 @@ class AddPlayerViewModelTest : BaseUnitTest {
             sut.onTextChanged("Fri")
             assertThat(awaitItem()).isEqualTo("Fri")
             sut.onTextChanged("Fritz")
-            assertThat(awaitItem()).isEqualTo("Fritz")
+            assertThat(awaitItem()).isEqualTo("Frtz")
         }
     }
 
