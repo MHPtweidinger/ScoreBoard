@@ -1,4 +1,4 @@
-package de.tobsinger.scoreboard.lib.ui.playeradd
+package de.tobsinger.scoreboard.core.ui.playeradd
 
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.text.KeyboardActions
@@ -14,7 +14,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardCapitalization
 import androidx.compose.ui.text.input.KeyboardType
-import de.tobsinger.scoreboard.lib.R
+import de.tobsinger.scoreboard.core.R
 
 
 @Composable

@@ -1,4 +1,4 @@
-package de.tobsinger.scoreboard.lib.service
+package de.tobsinger.scoreboard.core.service
 
 import kotlinx.coroutines.flow.Flow
 

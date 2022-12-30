@@ -1,8 +1,8 @@
-package de.tobsinger.scoreboard.lib.ui.playeradd
+package de.tobsinger.scoreboard.core.ui.playeradd
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import de.tobsinger.scoreboard.lib.service.ScoreboardService
+import de.tobsinger.scoreboard.core.service.ScoreboardService
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch

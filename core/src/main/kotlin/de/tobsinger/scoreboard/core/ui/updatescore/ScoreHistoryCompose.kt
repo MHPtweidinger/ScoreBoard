@@ -1,4 +1,4 @@
-package de.tobsinger.scoreboard.lib.ui.updatescore
+package de.tobsinger.scoreboard.core.ui.updatescore
 
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.layout.Arrangement
@@ -11,8 +11,8 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
-import de.tobsinger.scoreboard.lib.R
-import de.tobsinger.scoreboard.lib.ui.theme.Typography
+import de.tobsinger.scoreboard.core.R
+import de.tobsinger.scoreboard.core.ui.theme.Typography
 
 @OptIn(ExperimentalFoundationApi::class)
 @Composable

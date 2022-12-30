@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    namespace = "de.tobsinger.scoreboard.lib"
+    namespace = "de.tobsinger.scoreboard.core"
     compileSdk = 33
 
     defaultConfig {

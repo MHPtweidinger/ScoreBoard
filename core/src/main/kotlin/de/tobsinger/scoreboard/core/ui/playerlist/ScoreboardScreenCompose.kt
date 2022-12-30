@@ -1,4 +1,4 @@
-package de.tobsinger.scoreboard.lib.ui.playerlist
+package de.tobsinger.scoreboard.core.ui.playerlist
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
