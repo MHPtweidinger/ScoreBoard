@@ -1,10 +1,10 @@
-package de.tobsinger.scoreboard.lib
+package de.tobsinger.scoreboard.core
 
-import de.tobsinger.scoreboard.lib.service.ScoreboardService
-import de.tobsinger.scoreboard.lib.service.ScoreboardServiceImpl
-import de.tobsinger.scoreboard.lib.ui.playeradd.AddPlayerViewModel
-import de.tobsinger.scoreboard.lib.ui.playerlist.ScoreboardViewModel
-import de.tobsinger.scoreboard.lib.ui.updatescore.UpdateScoreViewModel
+import de.tobsinger.scoreboard.core.service.ScoreboardService
+import de.tobsinger.scoreboard.core.service.ScoreboardServiceImpl
+import de.tobsinger.scoreboard.core.ui.playeradd.AddPlayerViewModel
+import de.tobsinger.scoreboard.core.ui.playerlist.ScoreboardViewModel
+import de.tobsinger.scoreboard.core.ui.updatescore.UpdateScoreViewModel
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.androidx.viewmodel.dsl.viewModelOf
 import org.koin.core.module.dsl.singleOf

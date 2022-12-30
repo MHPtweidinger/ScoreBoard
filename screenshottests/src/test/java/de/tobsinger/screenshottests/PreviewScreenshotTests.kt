@@ -15,8 +15,8 @@ import com.airbnb.android.showkase.models.ShowkaseBrowserComponent
 import com.android.resources.NightMode
 import com.google.testing.junit.testparameterinjector.TestParameter
 import com.google.testing.junit.testparameterinjector.TestParameterInjector
-import de.tobsinger.scoreboard.lib.getMetadata
-import de.tobsinger.scoreboard.lib.ui.theme.ScoreboardTheme
+import de.tobsinger.scoreboard.core.getMetadata
+import de.tobsinger.scoreboard.core.ui.theme.ScoreboardTheme
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test

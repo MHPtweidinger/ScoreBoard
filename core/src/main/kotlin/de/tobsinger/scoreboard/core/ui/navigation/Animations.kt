@@ -1,4 +1,4 @@
-package de.tobsinger.scoreboard.lib.ui.navigation
+package de.tobsinger.scoreboard.core.ui.navigation
 
 import androidx.compose.animation.AnimatedContentScope
 import androidx.compose.animation.ExperimentalAnimationApi

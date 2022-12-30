@@ -1,10 +1,10 @@
-package de.tobsinger.scoreboard.lib.ui
+package de.tobsinger.scoreboard.core.ui
 
 import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
 import com.google.accompanist.navigation.animation.rememberAnimatedNavController
-import de.tobsinger.scoreboard.lib.ui.navigation.NavHost
+import de.tobsinger.scoreboard.core.ui.navigation.NavHost
 
 @OptIn(ExperimentalAnimationApi::class)
 @Composable

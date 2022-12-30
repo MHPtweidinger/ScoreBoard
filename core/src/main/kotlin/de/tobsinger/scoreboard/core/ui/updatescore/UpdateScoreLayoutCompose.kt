@@ -1,4 +1,4 @@
-package de.tobsinger.scoreboard.lib.ui.updatescore
+package de.tobsinger.scoreboard.core.ui.updatescore
 
 import android.widget.Toast
 import androidx.compose.foundation.layout.Column
@@ -29,7 +29,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import de.tobsinger.scoreboard.lib.R
+import de.tobsinger.scoreboard.core.R
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 

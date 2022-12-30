@@ -1,4 +1,4 @@
-package de.tobsinger.scoreboard.lib.ui.navigation
+package de.tobsinger.scoreboard.core.ui.navigation
 
 import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.runtime.Composable
@@ -8,13 +8,13 @@ import androidx.navigation.NavType
 import androidx.navigation.navArgument
 import com.google.accompanist.navigation.animation.AnimatedNavHost
 import com.google.accompanist.navigation.animation.composable
-import de.tobsinger.scoreboard.lib.ui.navigation.Params.PARAM_PLAYER_NAME
-import de.tobsinger.scoreboard.lib.ui.navigation.Routes.ADD_PLAYER
-import de.tobsinger.scoreboard.lib.ui.navigation.Routes.SCORES
-import de.tobsinger.scoreboard.lib.ui.navigation.Routes.UPDATE_SCORE
-import de.tobsinger.scoreboard.lib.ui.playeradd.AddPlayerScreen
-import de.tobsinger.scoreboard.lib.ui.playerlist.ScoreboardScreen
-import de.tobsinger.scoreboard.lib.ui.updatescore.UpdateScoreScreen
+import de.tobsinger.scoreboard.core.ui.navigation.Params.PARAM_PLAYER_NAME
+import de.tobsinger.scoreboard.core.ui.navigation.Routes.ADD_PLAYER
+import de.tobsinger.scoreboard.core.ui.navigation.Routes.SCORES
+import de.tobsinger.scoreboard.core.ui.navigation.Routes.UPDATE_SCORE
+import de.tobsinger.scoreboard.core.ui.playeradd.AddPlayerScreen
+import de.tobsinger.scoreboard.core.ui.playerlist.ScoreboardScreen
+import de.tobsinger.scoreboard.core.ui.updatescore.UpdateScoreScreen
 
 @OptIn(ExperimentalAnimationApi::class)
 @Composable

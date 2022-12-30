@@ -1,4 +1,4 @@
-package de.tobsinger.scoreboard.lib
+package de.tobsinger.scoreboard.core
 
 import com.airbnb.android.showkase.annotation.ShowkaseRoot
 import com.airbnb.android.showkase.annotation.ShowkaseRootModule

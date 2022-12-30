@@ -1,4 +1,4 @@
-package de.tobsinger.scoreboard.lib.ui.playerlist
+package de.tobsinger.scoreboard.core.ui.playerlist
 
 import android.widget.Toast
 import androidx.compose.material.icons.Icons
@@ -11,8 +11,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
-import de.tobsinger.scoreboard.lib.R
-
+import de.tobsinger.scoreboard.core.R
 
 @Composable
 internal fun ScreboardMenu(

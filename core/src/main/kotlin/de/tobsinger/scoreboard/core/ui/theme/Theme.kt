@@ -1,4 +1,4 @@
-package de.tobsinger.scoreboard.lib.ui.theme
+package de.tobsinger.scoreboard.core.ui.theme
 
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme

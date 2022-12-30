@@ -1,4 +1,4 @@
-package de.tobsinger.scoreboard.lib.ui.updatescore
+package de.tobsinger.scoreboard.core.ui.updatescore
 
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -14,7 +14,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
-import de.tobsinger.scoreboard.lib.R
+import de.tobsinger.scoreboard.core.R
 
 @Composable
 @OptIn(ExperimentalMaterial3Api::class)

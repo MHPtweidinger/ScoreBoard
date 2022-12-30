@@ -1,7 +1,7 @@
 package de.tobsinger.scoreboard
 
 import android.app.Application
-import de.tobsinger.scoreboard.lib.scoreboardModule
+import de.tobsinger.scoreboard.core.scoreboardModule
 import de.tobsinger.scoreboard.persistence.persistenceModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger

@@ -1,4 +1,4 @@
-package de.tobsinger.scoreboard.lib.ui.updatescore
+package de.tobsinger.scoreboard.core.ui.updatescore
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState

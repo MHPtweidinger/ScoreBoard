@@ -2,8 +2,8 @@ package de.tobsinger.scoreboard.ui
 
 import app.cash.turbine.test
 import com.google.common.truth.Truth.assertThat
-import de.tobsinger.scoreboard.lib.service.ScoreboardService
-import de.tobsinger.scoreboard.lib.ui.playeradd.AddPlayerViewModel
+import de.tobsinger.scoreboard.core.service.ScoreboardService
+import de.tobsinger.scoreboard.core.ui.playeradd.AddPlayerViewModel
 import io.mockk.coVerify
 import io.mockk.mockk
 import kotlinx.coroutines.test.runTest
