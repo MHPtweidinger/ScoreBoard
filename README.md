@@ -1,6 +1,8 @@
 # Score Board
 
-Simple Android application to note down scores for players on analogue games. 
+Simple Android application to note down scores for players on analogue games.
+
+[![Android CI](https://github.com/MHPtweidinger/ScoreBoard/actions/workflows/android.yml/badge.svg)](https://github.com/MHPtweidinger/ScoreBoard/actions/workflows/android.yml)
 
 ## Features
 
