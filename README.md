@@ -13,7 +13,7 @@ Simple Android application to note down scores for players on analogue games.
 
 ## Context 
 
-This is a showcase implementation to demonstrate state of the ART techniques to ensure quality for native Android applications. 
+This is a showcase implementation to demonstrate state of the art techniques to ensure quality for native Android applications. 
 
 ### Tests
 
