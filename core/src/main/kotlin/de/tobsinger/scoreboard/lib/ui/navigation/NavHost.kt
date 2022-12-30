@@ -8,13 +8,13 @@ import androidx.navigation.NavType
 import androidx.navigation.navArgument
 import com.google.accompanist.navigation.animation.AnimatedNavHost
 import com.google.accompanist.navigation.animation.composable
-import de.tobsinger.scoreboard.lib.ui.playerlist.ScoreboardScreen
 import de.tobsinger.scoreboard.lib.ui.navigation.Params.PARAM_PLAYER_NAME
 import de.tobsinger.scoreboard.lib.ui.navigation.Routes.ADD_PLAYER
 import de.tobsinger.scoreboard.lib.ui.navigation.Routes.SCORES
 import de.tobsinger.scoreboard.lib.ui.navigation.Routes.UPDATE_SCORE
-import de.tobsinger.scoreboard.lib.ui.playeradd.AddPlayerCompose
-import de.tobsinger.scoreboard.lib.ui.updatescore.UpdateScoreCompose
+import de.tobsinger.scoreboard.lib.ui.playeradd.AddPlayerScreen
+import de.tobsinger.scoreboard.lib.ui.playerlist.ScoreboardScreen
+import de.tobsinger.scoreboard.lib.ui.updatescore.UpdateScoreScreen
 
 @OptIn(ExperimentalAnimationApi::class)
 @Composable
@@ -43,7 +43,7 @@ internal fun NavHost(
         }
 
         composable(route = ADD_PLAYER) {
-            AddPlayerCompose(
+            AddPlayerScreen(
                 onNavigateBack = navHostController::popBackStack,
             )
         }
@@ -51,7 +51,7 @@ internal fun NavHost(
         composable(
             route = "$UPDATE_SCORE/{$PARAM_PLAYER_NAME}",
             content = { navBackStackEntry ->
-                UpdateScoreCompose(
+                UpdateScoreScreen(
                     onNavigateBack = navHostController::popBackStack,
                     name = navBackStackEntry.arguments?.getString(PARAM_PLAYER_NAME)
                         ?: return@composable
