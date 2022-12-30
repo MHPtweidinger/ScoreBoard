@@ -9,7 +9,7 @@ import io.mockk.mockk
 import kotlinx.coroutines.test.runTest
 import org.junit.Test
 
-class AddPlayerViewModelTest : BaseUnitTest() {
+class AddPlayerViewModelTest : BaseUnitTest {
 
     private val mockScoreboardService: ScoreboardService = mockk(relaxed = true)
     private val sut = AddPlayerViewModel(mockScoreboardService)

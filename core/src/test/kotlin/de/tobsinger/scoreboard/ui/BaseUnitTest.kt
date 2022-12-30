@@ -8,7 +8,7 @@ import kotlinx.coroutines.test.setMain
 import org.junit.After
 import org.junit.Before
 
-abstract class BaseUnitTest {
+interface BaseUnitTest {
 
     @OptIn(ExperimentalCoroutinesApi::class)
     @Before

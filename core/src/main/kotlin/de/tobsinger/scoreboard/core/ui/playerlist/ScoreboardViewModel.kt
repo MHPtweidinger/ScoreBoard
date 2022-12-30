@@ -4,13 +4,14 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import de.tobsinger.scoreboard.core.service.ScoreboardService
 import kotlinx.coroutines.flow.SharingStarted
+import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
 
 internal class ScoreboardViewModel(private val scoreboardService: ScoreboardService) : ViewModel() {
 
-    val state = scoreboardService.currentScore.map { currentScore ->
+    val state: StateFlow<ScoreboardState> = scoreboardService.currentScore.map { currentScore ->
         ScoreboardState(
             score = currentScore.toList().map {
                 PlayerStats(playerName = it.first, score = it.second.sum())
@@ -29,7 +30,7 @@ internal class ScoreboardViewModel(private val scoreboardService: ScoreboardServ
 
     fun deleteAllUsers() {
         viewModelScope.launch {
-            scoreboardService.deleteAllUsers()
+            scoreboardService.deleteAllPlayers()
         }
     }
 }

@@ -26,7 +26,7 @@ internal class ScoreboardServiceImpl(private val scoreboardPersistence: Scoreboa
         scoreboardPersistence.persistState(ScoreboardState(tmp))
     }
 
-    override suspend fun deleteAllUsers() {
+    override suspend fun deleteAllPlayers() {
         scoreboardPersistence.persistState(ScoreboardState(emptyMap()))
     }
 

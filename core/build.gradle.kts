@@ -43,7 +43,6 @@ dependencies {
 
     implementation("androidx.core:core-ktx:1.9.0")
     implementation("androidx.appcompat:appcompat:1.5.1")
-    implementation("com.google.android.material:material:1.7.0")
 
     implementation("io.insert-koin:koin-androidx-compose:3.4.1")
     implementation(libs.koin.android)
@@ -56,6 +55,7 @@ dependencies {
     implementation(libs.compose.ui.tooling.preview)
     implementation("androidx.compose.material3:material3:1.0.1")
     implementation("androidx.compose.material:material-icons-extended:1.3.1")
+    implementation("com.google.android.material:material:1.7.0")
     implementation("androidx.navigation:navigation-compose:2.5.3")
     implementation("com.google.accompanist:accompanist-navigation-animation:0.28.0")
     implementation("com.google.accompanist:accompanist-systemuicontroller:0.28.0")
