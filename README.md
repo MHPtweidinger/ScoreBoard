@@ -30,4 +30,4 @@ In this project screenshot tests are implemented using [paparazzi](https://githu
 - Jetpack Data Store
 - Jetpack Compose Navigation
 
-<image src="https://user-images.githubusercontent.com/24413483/210062906-603bfe32-4610-4ca2-a343-69082f8bdf76.png"/>
+<image width ="200" src="https://user-images.githubusercontent.com/24413483/210062906-603bfe32-4610-4ca2-a343-69082f8bdf76.png"/>
