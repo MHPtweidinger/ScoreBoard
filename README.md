@@ -34,7 +34,7 @@ In this project screenshot tests are implemented using [paparazzi](https://githu
 - Jetpack Data Store
 - Jetpack Compose Navigation
 
-### Screen shots
+### Screenshots
 
 <image width ="200" src="https://user-images.githubusercontent.com/24413483/210062906-603bfe32-4610-4ca2-a343-69082f8bdf76.png"/> <image width ="200" src="https://media.githubusercontent.com/media/MHPtweidinger/ScoreBoard/main/screenshottests/src/test/snapshots/images/de.tobsinger.screenshottests_PreviewScreenshotTests_screenshotTests%5BDefault%20Group%20-%20UpdateScoreComposePreview%2CPIXEL_5_DARK%5D.png"/>
 
