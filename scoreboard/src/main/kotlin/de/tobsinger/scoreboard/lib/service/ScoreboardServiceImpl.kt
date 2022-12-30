@@ -1,43 +1,44 @@
 package de.tobsinger.scoreboard.lib.service
 
-import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.flow.StateFlow
-import kotlinx.coroutines.flow.asStateFlow
+import de.tobsinger.scoreboard.persistence.ScoreboardPersistence
+import de.tobsinger.scoreboard.persistence.ScoreboardState
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.first
+import kotlinx.coroutines.flow.map
 
-internal class ScoreboardServiceImpl : ScoreboardService {
+internal class ScoreboardServiceImpl(private val scoreboardPersistence: ScoreboardPersistence) :
+    ScoreboardService {
 
-    private val _currentScore: MutableStateFlow<Map<String, List<Int>>> =
-        MutableStateFlow(emptyMap())
+    override val currentScore: Flow<Map<String, List<Int>>> =
+        scoreboardPersistence.data.map { it.value }
 
-    override val currentScore: StateFlow<Map<String, List<Int>>> = _currentScore.asStateFlow()
-
-    override fun addPlayer(name: String) {
-        val tmp = _currentScore.value.toMutableMap()
+    override suspend fun addPlayer(name: String) {
+        val tmp = scoreboardPersistence.data.first().value.toMutableMap()
         tmp[name] = emptyList()
-        _currentScore.value = tmp
+        scoreboardPersistence.persistState(ScoreboardState(tmp))
     }
 
-    override fun addPointsForPlayer(points: Int, player: String) {
-        val tmp = _currentScore.value.toMutableMap()
+    override suspend fun addPointsForPlayer(points: Int, player: String) {
+        val tmp = scoreboardPersistence.data.first().value.toMutableMap()
         val scores = tmp[player]?.toMutableList() ?: mutableListOf()
         scores.add(points)
         tmp[player] = scores
-        _currentScore.value = tmp
+        scoreboardPersistence.persistState(ScoreboardState(tmp))
     }
 
-    override fun deleteAllUsers() {
-        _currentScore.value = emptyMap()
+    override suspend fun deleteAllUsers() {
+        scoreboardPersistence.persistState(ScoreboardState(emptyMap()))
     }
 
-    override fun clearScores() {
-        val newList = mutableMapOf<String, List<Int>>()
-        _currentScore.value.keys.forEach { key -> newList[key] = emptyList() }
-        _currentScore.value = newList
+    override suspend fun clearScores() {
+        val tmp = mutableMapOf<String, List<Int>>()
+        scoreboardPersistence.data.first().value.keys.forEach { key -> tmp[key] = emptyList() }
+        scoreboardPersistence.persistState(ScoreboardState(tmp))
     }
 
-    override fun deletePlayer(playerName: String) {
-        val tmp = _currentScore.value.toMutableMap()
+    override suspend fun deletePlayer(playerName: String) {
+        val tmp =  scoreboardPersistence.data.first().value.toMutableMap()
         tmp.remove(playerName)
-        _currentScore.value = tmp
+        scoreboardPersistence.persistState(ScoreboardState(tmp))
     }
 }

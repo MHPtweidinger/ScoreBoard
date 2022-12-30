@@ -8,6 +8,7 @@ import de.tobsinger.scoreboard.lib.ui.updatescore.UpdateScoreViewModel
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.androidx.viewmodel.dsl.viewModelOf
 import org.koin.core.module.dsl.singleOf
+import org.koin.dsl.bind
 import org.koin.dsl.module
 
 val scoreboardModule = module {
@@ -23,5 +24,5 @@ val scoreboardModule = module {
         )
     }
 
-    singleOf<ScoreboardService>(::ScoreboardServiceImpl)
+    singleOf(::ScoreboardServiceImpl) bind ScoreboardService::class
 }

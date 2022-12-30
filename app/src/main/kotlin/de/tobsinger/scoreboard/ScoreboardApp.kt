@@ -2,6 +2,7 @@ package de.tobsinger.scoreboard
 
 import android.app.Application
 import de.tobsinger.scoreboard.lib.scoreboardModule
+import de.tobsinger.scoreboard.persistence.persistenceModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.startKoin
@@ -16,8 +17,9 @@ class ScoreboardApp : Application() {
             androidLogger()
             // Reference Android context
             androidContext(this@ScoreboardApp)
+
             // Load modules
-            modules(scoreboardModule)
+            modules(scoreboardModule, persistenceModule)
         }
     }
 }

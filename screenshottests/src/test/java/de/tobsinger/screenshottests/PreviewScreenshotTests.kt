@@ -4,14 +4,9 @@
  */
 package de.tobsinger.screenshottests
 
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
-//import androidx.compose.material3.dynamicDarkColorScheme
-//import androidx.compose.material3.dynamicLightColorScheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalInspectionMode
 import app.cash.paparazzi.DeviceConfig
 import app.cash.paparazzi.Paparazzi
@@ -65,7 +60,7 @@ class PreviewScreenshotTests {
         @TestParameter testDevice: ScreenshotTestDevice
     ) {
         paparazzi.unsafeUpdateConfig(
-            testDevice.deviceConfig.copy(softButtons = false, )
+            testDevice.deviceConfig.copy(softButtons = false)
         )
         paparazzi.snapshot {
             CompositionLocalProvider(LocalInspectionMode provides true) {

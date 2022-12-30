@@ -6,6 +6,7 @@ import de.tobsinger.scoreboard.lib.service.ScoreboardService
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.stateIn
+import kotlinx.coroutines.launch
 
 internal class ScoreboardViewModel(private val scoreboardService: ScoreboardService) : ViewModel() {
 
@@ -21,11 +22,15 @@ internal class ScoreboardViewModel(private val scoreboardService: ScoreboardServ
     )
 
     fun clearScores() {
-        scoreboardService.clearScores()
+        viewModelScope.launch {
+            scoreboardService.clearScores()
+        }
     }
 
     fun deleteAllUsers() {
-        scoreboardService.deleteAllUsers()
+        viewModelScope.launch {
+            scoreboardService.deleteAllUsers()
+        }
     }
 }
 

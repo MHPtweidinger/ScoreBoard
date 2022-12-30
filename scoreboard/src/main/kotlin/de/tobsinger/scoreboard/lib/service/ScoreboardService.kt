@@ -1,12 +1,12 @@
 package de.tobsinger.scoreboard.lib.service
 
-import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.Flow
 
 internal interface ScoreboardService {
-    val currentScore: StateFlow<Map<String, List<Int>>>
-    fun addPlayer(name: String)
-    fun addPointsForPlayer(points: Int, player: String)
-    fun deleteAllUsers()
-    fun clearScores()
-    fun deletePlayer(playerName: String)
+    val currentScore: Flow<Map<String, List<Int>>>
+    suspend fun addPlayer(name: String)
+    suspend fun addPointsForPlayer(points: Int, player: String)
+    suspend fun deleteAllUsers()
+    suspend fun clearScores()
+    suspend fun deletePlayer(playerName: String)
 }

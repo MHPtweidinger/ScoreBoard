@@ -1,9 +1,11 @@
 package de.tobsinger.scoreboard.lib.ui.playeradd
 
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
 import de.tobsinger.scoreboard.lib.service.ScoreboardService
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.launch
 
 internal class AddPlayerViewModel(
     private val scoreboardService: ScoreboardService
@@ -17,6 +19,8 @@ internal class AddPlayerViewModel(
     }
 
     fun onSave() {
-        scoreboardService.addPlayer(state.value)
+        viewModelScope.launch {
+            scoreboardService.addPlayer(state.value)
+        }
     }
 }

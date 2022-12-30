@@ -8,6 +8,7 @@ import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.stateIn
+import kotlinx.coroutines.launch
 
 internal class UpdateScoreViewModel(
     private val scoreboardService: ScoreboardService,
@@ -39,24 +40,30 @@ internal class UpdateScoreViewModel(
 
     fun add() {
         _inputState.value?.let { points ->
-            scoreboardService.addPointsForPlayer(
-                points = points,
-                player = playerName
-            )
+            viewModelScope.launch {
+                scoreboardService.addPointsForPlayer(
+                    points = points,
+                    player = playerName
+                )
+            }
         }
     }
 
     fun subtract() {
         _inputState.value?.let { points ->
-            scoreboardService.addPointsForPlayer(
-                points = points * -1,
-                player = playerName
-            )
+            viewModelScope.launch {
+                scoreboardService.addPointsForPlayer(
+                    points = points * -1,
+                    player = playerName
+                )
+            }
         }
     }
 
     fun deleteUser() {
-        scoreboardService.deletePlayer(playerName)
+        viewModelScope.launch {
+            scoreboardService.deletePlayer(playerName)
+        }
     }
 
     data class UpdateScoreViewState(val name: String, val scores: List<Int>, val userInput: Int?)
