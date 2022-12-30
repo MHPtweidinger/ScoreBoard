@@ -92,8 +92,11 @@ fun ScoreboardLayoutPreview() {
     ScoreboardLayout(
         state = ScoreboardState(
             score = listOf(
-                PlayerStats("Sandra", 42),
-                PlayerStats("Tobias", 36),
+                PlayerStats("Michael", -82),
+                PlayerStats("Dwight", 36),
+                PlayerStats("Andy", 36),
+                PlayerStats("Jim", 13),
+                PlayerStats("Pam", 42),
             )
         ),
         deleteAllPlayers = {},

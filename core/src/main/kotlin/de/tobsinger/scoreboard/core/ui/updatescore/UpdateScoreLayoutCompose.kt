@@ -128,7 +128,7 @@ internal fun UpdateScoreLayout(
 @Composable
 fun UpdateScoreComposePreview() = UpdateScoreLayout(
     state = UpdateScoreViewModel.UpdateScoreViewState(
-        name = "Sandra",
+        name = "Dwight",
         scores = listOf(2, 4, 12, -4, 6),
         userInput = 2
     ),
