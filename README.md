@@ -18,9 +18,13 @@ This is a showcase implementation to demonstrate state of the ART techniques to 
 ### Tests
 
 #### Screenshot Tests
+Screenshots are created for each screen with given reproducible states. These screenshots get compared on a pixel level to detect changes in the layout of the app. 
 In this project screenshot tests are implemented using [paparazzi](https://github.com/cashapp/paparazzi).
 
 #### Unit tests
+- Isolated classes
+- Mocked dependencies
+- Inspect behaviour of class under test under controlled conditions
 
 
 ### Architecture
