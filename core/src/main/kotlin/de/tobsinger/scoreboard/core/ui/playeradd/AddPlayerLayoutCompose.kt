@@ -85,7 +85,7 @@ internal fun AddPlayerLayout(
 fun AddPlayerComposePreview() =
     AddPlayerLayout(
         onNavigateBack = {},
-        name = "Sandra",
+        name = "Michael",
         onTextChanged = {},
         onSave = {}
     )
