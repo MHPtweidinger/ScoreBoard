@@ -1,4 +1,4 @@
-package de.tobsinger.scoreboard.ui
+package de.tobsinger.scoreboard
 
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi

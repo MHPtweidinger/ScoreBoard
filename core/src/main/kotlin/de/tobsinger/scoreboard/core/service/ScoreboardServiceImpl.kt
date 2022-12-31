@@ -13,6 +13,9 @@ internal class ScoreboardServiceImpl(private val scoreboardPersistence: Scoreboa
         scoreboardPersistence.data.map { it.value }
 
     override suspend fun addPlayer(name: String) {
+        if (name.isBlank() || name.isEmpty()) {
+            return
+        }
         val tmp = scoreboardPersistence.data.first().value.toMutableMap()
         tmp[name] = emptyList()
         scoreboardPersistence.persistState(ScoreboardState(tmp))
@@ -37,7 +40,7 @@ internal class ScoreboardServiceImpl(private val scoreboardPersistence: Scoreboa
     }
 
     override suspend fun deletePlayer(playerName: String) {
-        val tmp =  scoreboardPersistence.data.first().value.toMutableMap()
+        val tmp = scoreboardPersistence.data.first().value.toMutableMap()
         tmp.remove(playerName)
         scoreboardPersistence.persistState(ScoreboardState(tmp))
     }

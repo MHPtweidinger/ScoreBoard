@@ -38,7 +38,7 @@ internal class UpdateScoreViewModel(
         _inputState.value = input.toIntOrNull()
     }
 
-    fun add() {
+    fun addScore() {
         _inputState.value?.let { points ->
             viewModelScope.launch {
                 scoreboardService.addPointsForPlayer(
@@ -49,7 +49,7 @@ internal class UpdateScoreViewModel(
         }
     }
 
-    fun subtract() {
+    fun subtractScore() {
         _inputState.value?.let { points ->
             viewModelScope.launch {
                 scoreboardService.addPointsForPlayer(

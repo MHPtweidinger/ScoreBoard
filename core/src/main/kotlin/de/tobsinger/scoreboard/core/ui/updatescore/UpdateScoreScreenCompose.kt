@@ -15,11 +15,11 @@ internal fun UpdateScoreScreen(name: String, onNavigateBack: () -> Unit) {
         onTextChanged = viewModel::updateInput,
         onNavigateBack = onNavigateBack,
         onAdd = {
-            viewModel.add()
+            viewModel.addScore()
             onNavigateBack()
         },
         onSubtract = {
-            viewModel.subtract()
+            viewModel.subtractScore()
             onNavigateBack()
         },
         deleteUser = {

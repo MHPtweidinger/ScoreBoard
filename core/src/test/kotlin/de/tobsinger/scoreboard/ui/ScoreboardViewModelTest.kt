@@ -2,6 +2,7 @@ package de.tobsinger.scoreboard.ui
 
 import app.cash.turbine.test
 import com.google.common.truth.Truth.assertThat
+import de.tobsinger.scoreboard.BaseUnitTest
 import de.tobsinger.scoreboard.core.service.ScoreboardService
 import de.tobsinger.scoreboard.core.ui.playerlist.PlayerStats
 import de.tobsinger.scoreboard.core.ui.playerlist.ScoreboardState
