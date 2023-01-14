@@ -16,13 +16,13 @@ import androidx.compose.ui.text.input.KeyboardCapitalization
 import androidx.compose.ui.text.input.KeyboardType
 import de.tobsinger.scoreboard.core.R
 
-
 @Composable
 @OptIn(ExperimentalMaterial3Api::class)
 internal fun NameInput(
     name: String,
     onSave: () -> Unit,
     focusRequester: FocusRequester,
+    modifier: Modifier = Modifier,
     onTextChanged: (String) -> Unit
 ) {
     TextField(
@@ -33,7 +33,7 @@ internal fun NameInput(
             capitalization = KeyboardCapitalization.Words,
         ),
         keyboardActions = KeyboardActions { onSave() },
-        modifier = Modifier
+        modifier = modifier
             .fillMaxWidth()
             .focusRequester(focusRequester),
         onValueChange = onTextChanged,

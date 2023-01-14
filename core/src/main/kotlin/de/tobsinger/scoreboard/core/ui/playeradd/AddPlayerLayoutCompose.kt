@@ -20,11 +20,13 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.focus.FocusRequester
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import de.tobsinger.scoreboard.core.R
 import de.tobsinger.scoreboard.core.ui.theme.Typography
+import kotlinx.coroutines.delay
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -59,7 +61,13 @@ internal fun AddPlayerLayout(
                 .padding(20.dp),
             verticalArrangement = Arrangement.SpaceBetween,
         ) {
-            NameInput(name, onSave, focusRequester, onTextChanged)
+            NameInput(
+                name = name,
+                onSave = onSave,
+                focusRequester = focusRequester,
+                modifier = Modifier.testTag("name_input"),
+                onTextChanged = onTextChanged
+            )
 
             Button(
                 onClick = onSave, modifier = Modifier
@@ -75,6 +83,7 @@ internal fun AddPlayerLayout(
     }
 
     LaunchedEffect(Unit) {
+        delay(100)
         focusRequester.requestFocus()
     }
 }

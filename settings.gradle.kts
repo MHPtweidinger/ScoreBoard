@@ -16,9 +16,15 @@ dependencyResolutionManagement {
             version("koin", "3.3.2")
             library("koin-android", "io.insert-koin", "koin-android").versionRef("koin")
             library("koin-core", "io.insert-koin", "koin-core").versionRef("koin")
+            library("koin-test", "io.insert-koin", "koin-test").versionRef("koin")
+            library("koin-junit4", "io.insert-koin", "koin-test-junit4").versionRef("koin")
 
             version("compose", "1.3.2")
             library("compose-ui", "androidx.compose.ui", "ui").versionRef("compose")
+
+            version("mockk", "1.13.3")
+            library("mockk-android", "io.mockk","mockk-android").versionRef("mockk")
+
             library(
                 "compose-ui-tooling-preview",
                 "androidx.compose.ui",

@@ -7,7 +7,6 @@ plugins {
 android {
     namespace = "de.tobsinger.scoreboard.core"
     compileSdk = 33
-
     defaultConfig {
         minSdk = 21
         targetSdk = 33
@@ -34,6 +33,14 @@ android {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
+    testOptions {
+        unitTests {
+            isIncludeAndroidResources = true
+        }
+        packagingOptions {
+            resources.excludes.add("META-INF/*")
+        }
+    }
     kotlinOptions {
         jvmTarget = "1.8"
     }
@@ -42,7 +49,7 @@ android {
 dependencies {
 
     implementation("androidx.core:core-ktx:1.9.0")
-    implementation("androidx.appcompat:appcompat:1.5.1")
+    implementation("androidx.appcompat:appcompat:1.6.0")
 
     implementation("io.insert-koin:koin-androidx-compose:3.4.1")
     implementation(libs.koin.android)
@@ -64,10 +71,15 @@ dependencies {
 
     testImplementation("junit:junit:4.13.2")
     testImplementation("com.google.truth:truth:1.1.3")
-    testImplementation("io.mockk:mockk-android:1.13.3")
+    testImplementation(libs.mockk.android)
     testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.4")
     testImplementation("app.cash.turbine:turbine:0.12.1")
 
-    androidTestImplementation("androidx.test.ext:junit:1.1.4")
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.0")
+    androidTestImplementation("androidx.test.ext:junit:1.1.5")
+    androidTestImplementation("androidx.compose.ui:ui-test-junit4:1.3.3")
+    debugImplementation("androidx.compose.ui:ui-test-manifest:1.4.0-alpha04")
+
+    androidTestImplementation(libs.koin.test)
+    androidTestImplementation(libs.koin.junit4)
+    androidTestImplementation(libs.mockk.android)
 }
