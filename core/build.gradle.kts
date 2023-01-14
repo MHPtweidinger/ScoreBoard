@@ -1,3 +1,6 @@
+import com.android.build.gradle.internal.dsl.ManagedVirtualDevice
+
+
 plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
@@ -39,6 +42,19 @@ android {
         }
         packagingOptions {
             resources.excludes.add("META-INF/*")
+        }
+        managedDevices {
+            devices{
+                maybeCreate<com.android.build.api.dsl.ManagedVirtualDevice>("pixel2api30").apply {
+                    // Use device profiles you typically see in Android Studio.
+                    device = "Pixel 2"
+                    // ATDs currently support only API level 30.
+                    apiLevel = 30
+                    // You can also specify "google-atd" if you require Google Play Services.
+                    systemImageSource = "aosp-atd"
+                }
+            }
+
         }
     }
     kotlinOptions {

@@ -28,7 +28,7 @@ jobs:
     - name: Run screenshot tests with Gradle
       run: ./gradlew verifyPaparazziDebug
     - name: Run compose tests
-      run: ./gradlew -Pandroid.experimental.androidTest.numManagedDeviceShards=5 -Pandroid.experimental.testOptions.managedDevices.setupTimeoutMinutes=300 -Pandroid.testoptions.manageddevices.emulator.gpu="swiftshader_indirect" pixel4api30DebugAndroidTest --warning-mode all "$@"
+      run: ./gradlew -Pandroid.experimental.androidTest.numManagedDeviceShards=5 -Pandroid.experimental.testOptions.managedDevices.setupTimeoutMinutes=300 -Pandroid.testoptions.manageddevices.emulator.gpu="swiftshader_indirect" pixel2api30DebugAndroidTest --warning-mode all "$@"
     - name: Zip build reports
       if: always()
       run: |
