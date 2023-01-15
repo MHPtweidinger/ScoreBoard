@@ -23,12 +23,12 @@ jobs:
         cache: gradle
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
+    - name: Run compose tests
+      run: ./gradlew -Pandroid.experimental.androidTest.numManagedDeviceShards=5 -Pandroid.experimental.testOptions.managedDevices.setupTimeoutMinutes=300 -Pandroid.testoptions.manageddevices.emulator.gpu="swiftshader_indirect" pixel4api30DebugAndroidTest --warning-mode all "$@"
     - name: Build with Gradle
       run: ./gradlew build
     - name: Run screenshot tests with Gradle
       run: ./gradlew verifyPaparazziDebug
-    - name: Run compose tests
-      run: ./gradlew -Pandroid.experimental.androidTest.numManagedDeviceShards=5 -Pandroid.experimental.testOptions.managedDevices.setupTimeoutMinutes=300 -Pandroid.testoptions.manageddevices.emulator.gpu="swiftshader_indirect" pixel2api30DebugAndroidTest --warning-mode all "$@"
     - name: Zip build reports
       if: always()
       run: |
