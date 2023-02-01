@@ -74,6 +74,7 @@ class ScoreboardServiceImplTest {
     @Test
     fun `check add points for player`() = runTest {
         val playerName = "Andy"
+        val newScore = 4
         val players = mapOf(
             "Dwight" to listOf(2, -4, 12, 7, -4, 12),
             "Michael" to listOf(4, 13, 2, -2, -8, 2),
@@ -81,14 +82,14 @@ class ScoreboardServiceImplTest {
             "Jim" to listOf(6, 4, 8, 12, 21, 7),
         )
         every { mockScoreboardPersistence.data } returns flowOf(ScoreboardState(players))
-        ScoreboardServiceImpl(mockScoreboardPersistence).addPointsForPlayer(4, playerName)
+        ScoreboardServiceImpl(mockScoreboardPersistence).addPointsForPlayer(newScore, playerName)
         coVerify(exactly = 1) {
             mockScoreboardPersistence.persistState(
                 ScoreboardState(
                     mapOf(
                         "Dwight" to listOf(2, -4, 12, 7, -4, 12),
                         "Michael" to listOf(4, 13, 2, -2, -8, 2),
-                        playerName to listOf(7, -4, 7, 4, -4, 12, 4),
+                        playerName to listOf(7, -4, 7, 4, -4, 12, newScore),
                         "Jim" to listOf(6, 4, 8, 12, 21, 7),
                     )
                 )
