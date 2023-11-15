@@ -50,6 +50,7 @@ internal fun UpdateScoreLayout(
     val context = LocalContext.current
 
     Scaffold(
+        modifier = Modifier.imePadding(),
         topBar = {
             MediumTopAppBar(
                 title = { Text(text = state.name) },
@@ -95,11 +96,8 @@ internal fun UpdateScoreLayout(
             modifier = Modifier
                 .fillMaxSize()
                 .padding(paddingValues)
-                .padding(bottom = 20.dp, start = 20.dp, end = 20.dp)
-                .imePadding()
-            ,
+                .padding(bottom = 20.dp, start = 20.dp, end = 20.dp),
         ) {
-
             ScoreHistory(listState = listState, modifier = Modifier.weight(1f), state = state)
 
             CurrentScore(state)

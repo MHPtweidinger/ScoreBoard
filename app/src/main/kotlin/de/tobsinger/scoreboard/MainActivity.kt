@@ -4,12 +4,15 @@ import android.os.Bundle
 import android.view.WindowManager
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.core.view.WindowCompat
 import de.tobsinger.scoreboard.core.ui.ScoreboardUi
 import de.tobsinger.scoreboard.core.ui.theme.ScoreboardTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        WindowCompat.setDecorFitsSystemWindows(window, false)
+
         setContent {
             ScoreboardTheme {
                 ScoreboardUi()

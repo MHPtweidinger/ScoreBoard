@@ -34,7 +34,7 @@ internal fun PlayersWithScores(
             verticalArrangement = Arrangement.spacedBy(20.dp),
             modifier = Modifier
                 .fillMaxSize()
-                .padding(20.dp),
+                .padding(horizontal = 20.dp),
         ) {
             items(state.score.size) { index ->
                 Card(modifier = Modifier.animateItemPlacement()) {

@@ -34,7 +34,7 @@ internal fun AddPlayerLayout(
     name: String,
     onTextChanged: (String) -> Unit,
     onNavigateBack: () -> Unit,
-    onSave: () -> Unit
+    onSave: () -> Unit,
 ) {
 
     val focusRequester = remember { FocusRequester() }
@@ -58,7 +58,7 @@ internal fun AddPlayerLayout(
             modifier = Modifier
                 .fillMaxSize()
                 .padding(paddingValues)
-                .padding(40.dp)
+                .padding(horizontal = 20.dp)
                 .imePadding(),
             verticalArrangement = Arrangement.SpaceBetween,
         ) {
