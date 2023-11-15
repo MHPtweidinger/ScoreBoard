@@ -13,7 +13,6 @@ import kotlinx.coroutines.flow.flowOf
 import kotlinx.coroutines.test.runTest
 import org.junit.Test
 
-@OptIn(ExperimentalCoroutinesApi::class)
 class ScoreboardServiceImplTest {
 
     private val mockScoreboardPersistence: ScoreboardPersistence = mockk(relaxed = true)

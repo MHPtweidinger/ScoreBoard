@@ -32,3 +32,4 @@ fun AnimatedContentScope<NavBackStackEntry>.slideInRight() =
         AnimatedContentScope.SlideDirection.Right,
         animationSpec = tween(),
     )
+

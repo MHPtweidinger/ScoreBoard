@@ -1,12 +1,9 @@
-/*
- * Dr. Ing. h.c. F. Porsche AG confidential. This code is protected by intellectual property rights.
- * The Dr. Ing. h.c. F. Porsche AG owns exclusive legal rights of use.
- */
 package de.tobsinger.scoreboard.core
 
 import android.content.Context
 import android.content.Intent
 import androidx.activity.ComponentActivity
+import androidx.compose.ui.test.ExperimentalTestApi
 import androidx.compose.ui.test.SemanticsMatcher
 import androidx.compose.ui.test.junit4.AndroidComposeTestRule
 import androidx.compose.ui.test.junit4.ComposeContentTestRule
@@ -45,6 +42,7 @@ fun <A : ComponentActivity> ActivityScenarioRule<A>.getActivity(): A {
 }
 
 private const val WAIT_UNTIL_TIMEOUT = 30000L
+@OptIn(ExperimentalTestApi::class)
 fun ComposeContentTestRule.waitUntilExists(
     matcher: SemanticsMatcher,
     timeoutMillis: Long = WAIT_UNTIL_TIMEOUT,

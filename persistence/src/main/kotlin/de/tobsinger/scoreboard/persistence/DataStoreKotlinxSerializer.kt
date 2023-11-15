@@ -1,7 +1,3 @@
-/*
- * Dr. Ing. h.c. F. Porsche AG confidential. This code is protected by intellectual property rights.
- * The Dr. Ing. h.c. F. Porsche AG owns exclusive legal rights of use.
- */
 package de.tobsinger.scoreboard.persistence
 
 import androidx.datastore.core.Serializer

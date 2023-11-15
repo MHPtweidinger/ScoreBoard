@@ -58,7 +58,8 @@ internal fun AddPlayerLayout(
             modifier = Modifier
                 .fillMaxSize()
                 .padding(paddingValues)
-                .padding(20.dp),
+                .padding(40.dp)
+                .imePadding(),
             verticalArrangement = Arrangement.SpaceBetween,
         ) {
             NameInput(
@@ -71,6 +72,7 @@ internal fun AddPlayerLayout(
 
             Button(
                 onClick = onSave, modifier = Modifier
+                    .testTag("submit")
                     .fillMaxWidth()
                     .padding(top = 20.dp)
             ) {
@@ -94,7 +96,7 @@ internal fun AddPlayerLayout(
 fun AddPlayerComposePreview() =
     AddPlayerLayout(
         onNavigateBack = {},
-        name = "Michael",
+        name = "Pam",
         onTextChanged = {},
         onSave = {}
     )

@@ -3,6 +3,7 @@ package de.tobsinger.scoreboard.core.ui.updatescore
 import android.widget.Toast
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.imePadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.material.icons.Icons
@@ -41,7 +42,7 @@ internal fun UpdateScoreLayout(
     onAdd: () -> Unit,
     deleteUser: () -> Unit,
     onSubtract: () -> Unit,
-    onNavigateBack: () -> Unit
+    onNavigateBack: () -> Unit,
 ) {
     val focusRequester = remember { FocusRequester() }
     val listState = rememberLazyListState()
@@ -95,6 +96,8 @@ internal fun UpdateScoreLayout(
                 .fillMaxSize()
                 .padding(paddingValues)
                 .padding(bottom = 20.dp, start = 20.dp, end = 20.dp)
+                .imePadding()
+            ,
         ) {
 
             ScoreHistory(listState = listState, modifier = Modifier.weight(1f), state = state)

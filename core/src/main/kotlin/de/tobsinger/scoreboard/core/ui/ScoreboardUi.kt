@@ -12,6 +12,6 @@ fun ScoreboardUi() {
 
     val navHostController: NavHostController = rememberAnimatedNavController()
     NavHost(
-        navHostController = navHostController
+        navHostController = navHostController,
     )
 }

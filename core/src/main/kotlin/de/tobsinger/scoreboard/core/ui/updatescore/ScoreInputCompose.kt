@@ -17,7 +17,6 @@ import androidx.compose.ui.unit.dp
 import de.tobsinger.scoreboard.core.R
 
 @Composable
-@OptIn(ExperimentalMaterial3Api::class)
 internal fun ScoreInput(
     state: UpdateScoreViewModel.UpdateScoreViewState,
     focusRequester: FocusRequester,

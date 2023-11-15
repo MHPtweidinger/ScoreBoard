@@ -33,6 +33,7 @@ internal fun PlayersWithScores(
         LazyColumn(
             verticalArrangement = Arrangement.spacedBy(20.dp),
             modifier = Modifier
+                .fillMaxSize()
                 .padding(20.dp),
         ) {
             items(state.score.size) { index ->

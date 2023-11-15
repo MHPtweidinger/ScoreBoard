@@ -12,11 +12,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Scoreboard"
-        tools:targetApi="33">
+        tools:targetApi="34">
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:windowSoftInputMode="stateVisible|adjustResize"
+            android:windowSoftInputMode="adjustNothing"
             android:theme="@style/Theme.Scoreboard">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
