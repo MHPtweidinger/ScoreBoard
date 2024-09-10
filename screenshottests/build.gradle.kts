@@ -49,13 +49,13 @@ dependencies {
     implementation(libs.compose.ui)
     implementation(libs.compose.ui.tooling.preview)
 
-    implementation("androidx.compose.material:material:1.4.3")
+    implementation("androidx.compose.material:material:1.7.0")
 
-    implementation("com.airbnb.android:showkase:1.0.2")
+    implementation("com.airbnb.android:showkase:1.0.3")
     implementation(project(":core"))
 
-    kapt("com.airbnb.android:showkase-processor:1.0.2")
+    kapt("com.airbnb.android:showkase-processor:1.0.3")
 
-    testImplementation("com.google.testparameterinjector:test-parameter-injector:1.14")
+    testImplementation("com.google.testparameterinjector:test-parameter-injector:1.16")
     testImplementation("junit:junit:4.13.2")
 }
